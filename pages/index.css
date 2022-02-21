@@ -1,0 +1,146 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/user-info/user-info.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/places-list/places-list.css);
+@import url(../blocks/place-card/place-card.css);
+@import url(../blocks/popup/popup.css);
+
+body {
+  background-color: #000;
+}
+
+.edit-profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.edit-profile__content {
+  width: 430px;
+  min-height: 330px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 34px 36px;
+}
+
+@media screen and (max-width: 540px) {
+  .edit-profile__content {
+    width: calc(100% - 60px);
+  }
+}
+
+.edit-profile__close {
+  width: 26px;
+  position: absolute;
+  top: -26px;
+  right: -26px;
+  cursor: pointer;
+}
+
+.edit-profile__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.edit-profile__form {
+  margin-top: 60px;
+}
+
+.edit-profile__input {
+  width: 100%;
+  height: 47px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  line-height: 17px;
+  box-sizing: border-box;
+  padding: 5px 6px 13px;
+}
+
+.edit-profile__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 48px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: black;
+  color:white;
+  font-size: 18px;
+}
+
+.button:disabled.edit-profile__button {
+  border: 1px solid rgba(0, 0, 0, .2);
+  color: rgba(0, 0, 0, .2);
+  background-color: white;
+}
+
+
+.user-info__edit-profile{
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px solid white;
+  color: white;
+}
+.edit-profile.popup_is-opened {
+  display: flex;
+}
+
+.error-message {
+    font-size: 12px;
+    color: #ff0000;
+    margin: 5px 0 24px 0;
+    opacity: 0;
+}
+
+.error-message:last-of-type {
+    margin-bottom: 0;
+}
+
+.error-message_active {
+    margin: 5px 0 24px 6px;
+    opacity: 1;
+}
+
+
+.big-image__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+ 
+
+}
+
+.big-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.big-image_is-closed {
+   display: none;
+}
+
+.big-image__image {
+ max-width: 80vw;
+ max-height: 80vh;
+ padding-top: 30px;
+}
